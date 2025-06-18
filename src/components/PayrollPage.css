@@ -1,0 +1,30 @@
+.payroll-container {
+  padding: 30px;
+  background: #f5f8fa;
+  border-radius: 12px;
+  animation: slideFadeIn 0.3s ease-in;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.table td {
+  font-size: 0.95rem;
+}
+
+.table th {
+  background: #343a40 !important;
+  color: #fff;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

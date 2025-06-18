@@ -1,0 +1,28 @@
+.attendance-container {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.badge {
+  font-size: 0.85rem;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
