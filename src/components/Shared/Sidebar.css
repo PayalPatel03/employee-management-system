@@ -1,0 +1,14 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #343a40;
+}
+.sidebar ul li {
+  padding: 12px 16px;
+}
+.sidebar ul li:hover {
+  background-color: #495057;
+}

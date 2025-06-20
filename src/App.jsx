@@ -1,30 +1,73 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
-import EmployeePage from './components/EmployeePage';
-import AttendancePage from './components/AttendancePage';
-import PayrollPage from './components/PayrollPage';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SignUpPage from "./Pages/SignUpPage";
+import LoginPage from "./Pages/LoginPage";
+import AdminDashboard from "./Pages/Admin/AdminDashboard";
+import EmployeeDashboard from "./Pages/EmployeeDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
+import EmployeeManagement from "./Pages/EmployeeManagement";
+import TaskManagement from "./Pages/Admin/TaskManagement";
+import PayrollPage from "./Pages/Admin/PayrollPage";
+import EmployeeProfile from "./Pages/EmployeeProfile";
+
 
 const App = () => {
-  const [collapsed, setCollapsed] = useState(false);
-
   return (
     <Router>
-      <div className="d-flex">
-        <Sidebar collapsed={collapsed} toggleCollapse={() => setCollapsed(!collapsed)} />
-        <div className="main-content p-4 w-100">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/employees" element={<EmployeePage />} />
-           
-<Route path="/attendance" element={<AttendancePage />} />
-<Route path="/payroll" element={<PayrollPage/>} />
-          
-            <Route path="/settings" element={<div>Settings Page</div>} />
-          </Routes>
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<SignUpPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute role="admin">
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+     
+        <Route
+          path="/employee/dashboard"
+          element={
+            <ProtectedRoute role="employee">
+              <EmployeeDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/payroll"
+          element={
+            <ProtectedRoute role="admin">
+              <PayrollPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/employees"
+          element={
+            <ProtectedRoute role="admin">
+              <EmployeeManagement />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/tasks"
+          element={
+            <ProtectedRoute role="admin">
+              <TaskManagement />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/employee/profile"
+          element={
+            <ProtectedRoute role="employee">
+              <EmployeeProfile />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
     </Router>
   );
 };
