@@ -88,12 +88,7 @@ const AddEmployeeModal = ({ show, onClose, onSave, editData }) => {
               value={form.da}
               onChange={(e) => setForm({ ...form, da: e.target.value })}
             />
-              <input
-              className="form-control mb-2"
-              placeholder="ta"
-              value={form.ta}
-              onChange={(e) => setForm({ ...form, ta: e.target.value })}
-            />
+              
           </div>
           <div className="modal-footer">
             <button className="btn btn-secondary" onClick={onClose}>
