@@ -1,12 +1,89 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 👩‍💼 Employee Management System (EMS)
 
-Currently, two official plugins are available:
+A modern Employee Management System built using **React**, **Redux Toolkit**, **Bootstrap**, and **LocalStorage**, featuring role-based views for Admin and Employee.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### 🔐 Authentication
+- Role-based login for **Admin** and **Employee**
+- LocalStorage-based session management
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🧑‍💼 Admin Dashboard
+- ✅ Add, Edit, Delete Employees
+- 📤 Upload Employee CSV
+- 📝 Assign and Manage Tasks
+- 💸 Generate Monthly Payroll and Salary Slips (PDF/Modal)
+- 📊 Dashboard Stats & Charts
+- 🕒 Mark Attendance (per employee per day)
+- 💬 Chat/Communication System *(coming soon)*
+
+### 👨‍💻 Employee Dashboard
+- 👁️ View Personal Profile
+- 📋 View Assigned Tasks
+- ✍️ Update Task Status *(optional)*
+- 🗓️ View Attendance
+- 💵 View Monthly Payroll and Download Salary Slip
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, Bootstrap, CSS, jsPDF, Redux Toolkit
+- **State Management**: Redux Toolkit
+- **Data Storage**: LocalStorage *(can be extended to JSON Server/Firebase)*
+- **PDF Generation**: jsPDF & jspdf-autotable
+- **Charts**: Chart.js or Recharts (if used)
+
+## 📁 Project Structure
+
+employee-management-system/
+│
+├── components/
+│ ├── Admin/
+│ ├── Employee/
+│ └── Shared/
+│
+├── features/
+│ ├── auth/
+│ ├── employee/
+│ └── task/
+│
+├── pages/
+│ ├── AdminDashboard.jsx
+│ ├── EmployeeDashboard.jsx
+│ ├── TaskManagement.jsx
+│ └── PayrollPage.jsx
+│
+├── App.jsx
+└── index.js
+
+
+
+## 💡 Getting Started
+
+### Prerequisites
+
+- Node.js v16+
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/PayalPatel03/employee-management-system.git
+cd employee-management-system
+npm install
+npm start
+
+
+Login Credentials (Example)
+Admin
+
+Username: admin@ems.com
+
+Role: admin
+
+Employee
+
+Username: employee1@ems.com
+
+Role: employee
