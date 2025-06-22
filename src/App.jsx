@@ -9,6 +9,7 @@ import EmployeeManagement from "./Pages/EmployeeManagement";
 import TaskManagement from "./Pages/Admin/TaskManagement";
 import PayrollPage from "./Pages/Admin/PayrollPage";
 import EmployeeProfile from "./Pages/EmployeeProfile";
+import EmployeePayrollPage from "./Pages/EmployeePayrollPage";
 
 
 const App = () => {
@@ -25,6 +26,10 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="/employee/payroll" element={<EmployeePayrollPage />} />
+        
+
+
      
         <Route
           path="/employee/dashboard"
