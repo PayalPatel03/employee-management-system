@@ -34,28 +34,6 @@ A modern Employee Management System built using **React**, **Redux Toolkit**, **
 - **PDF Generation**: jsPDF & jspdf-autotable
 - **Charts**: Chart.js or Recharts (if used)
 
-## 📁 Project Structure
-
-employee-management-system/
-│
-├── components/
-│ ├── Admin/
-│ ├── Employee/
-│ └── Shared/
-│
-├── features/
-│ ├── auth/
-│ ├── employee/
-│ └── task/
-│
-├── pages/
-│ ├── AdminDashboard.jsx
-│ ├── EmployeeDashboard.jsx
-│ ├── TaskManagement.jsx
-│ └── PayrollPage.jsx
-│
-├── App.jsx
-└── index.js
 
 
 
