@@ -1,0 +1,45 @@
+.navbar {
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  transition: background 0.3s ease-in-out;
+  border-bottom: 2px solid #ff4d4d;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.navbar .navbar-brand::before {
+  content: "👤 ";
+  margin-right: 5px;
+}
+
+.navbar .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .btn-danger:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff4d4d;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar .btn-danger {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
