@@ -4,11 +4,11 @@ import Sidebar from '../components/Shared/Sidebar';
 import Header from '../components/Shared/Header';
 
 const EmployeeTask = () => {
-  const user = JSON.parse(localStorage.getItem("authUser")); // logged-in employee
+  const user = JSON.parse(localStorage.getItem("authUser")); 
   const { tasks } = useSelector(state => state.task);
   
-  // You can match by either name or id depending on how admin assigns tasks
-  const myTasks = tasks.filter(task => task.assignee === user.name); // or task.assigneeId === user.id
+
+  const myTasks = tasks.filter(task => task.assignee === user.name); 
 
   return (
     <div className="d-flex">
